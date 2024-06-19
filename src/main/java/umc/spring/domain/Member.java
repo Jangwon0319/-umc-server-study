@@ -53,7 +53,7 @@ public class Member extends BaseEntity {
     private String email;
 
     private Integer point;
-    
+    //
     // 양방향 매핑
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberAgree> memberAgreeList = new ArrayList<>();
