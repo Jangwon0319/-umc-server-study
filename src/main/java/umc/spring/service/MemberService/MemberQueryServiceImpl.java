@@ -47,6 +47,7 @@ public class MemberQueryServiceImpl implements MemberQueryService {
 
         Page<Mission> Memberpage = missionRepository.findAllByMemberMissionList(member, PageRequest.of(page,10));
 
+        // 반환
         return Memberpage;
     }
 }
