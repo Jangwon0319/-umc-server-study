@@ -43,4 +43,28 @@ public class MemberResponseDTO {
         String body;
         LocalDate createdAt;
     }
+    
+    // 진행중인 미션 목록 조회 API 구현
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class MissionPreViewListDTO {
+        List<MemberResponseDTO.MissionPreViewDTO> missionList;
+        Integer listSize;
+        Integer totalPage;
+        Long totalElements;
+        Boolean isFirst;
+        Boolean isLast;
+    }
+
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class MissionPreViewDTO {
+        String missionSpec;
+        Integer reward;
+        LocalDate createAt;
+    }
 }
