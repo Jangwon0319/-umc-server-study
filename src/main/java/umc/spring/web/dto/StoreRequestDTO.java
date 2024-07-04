@@ -3,6 +3,7 @@ package umc.spring.web.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
+import org.springframework.web.multipart.MultipartFile;
 
 public class StoreRequestDTO {
 
@@ -14,5 +15,7 @@ public class StoreRequestDTO {
         Float score;
         @NotBlank
         String body;
+
+        MultipartFile reviewPicture;
     }
 }
